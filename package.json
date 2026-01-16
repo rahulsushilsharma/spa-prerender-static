@@ -1,7 +1,7 @@
 {
   "name": "spa-prerender-static",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight, framework-agnostic SPA prerendering library for generating SEO-friendly static HTML pages.",
   "author": "Rahul Sharma <rahu8299@gmail.com>",
   "license": "MIT",
