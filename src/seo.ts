@@ -37,7 +37,7 @@ ${ampUrl ? `<link rel="amphtml" href="${escape(ampUrl)}">` : ""}
 ${url ? `<meta property="og:url" content="${escape(url)}">` : ""}
 ${image ? `<meta property="og:image" content="${escape(image)}">` : ""}
 
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">
 <meta name="twitter:title" content="${escape(title)}">
 <meta name="twitter:description" content="${escape(description)}">
 ${image ? `<meta name="twitter:image" content="${escape(image)}">` : ""}
