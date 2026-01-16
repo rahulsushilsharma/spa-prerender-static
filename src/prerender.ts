@@ -3,9 +3,13 @@ import path from "path";
 import { generateSEOTags } from "./seo";
 import type { PrerenderOptions } from "./types";
 
-export function prerender(options: PrerenderOptions) {
-  const { routes, template, dist, render } = options;
-
+export function prerender({
+  routes,
+  template,
+  dist,
+  render,
+  headTags,
+}: PrerenderOptions) {
   const templateHtml = fs.readFileSync(template, "utf-8");
 
   for (const route of routes) {
@@ -17,10 +21,10 @@ export function prerender(options: PrerenderOptions) {
     const finalHtml = templateHtml
       .replace(
         "%TITLE%",
-        typeof route.tags === "string" ? "" : route.tags.title
+        typeof route.tags === "string" ? "Untitled" : route.tags.title
       )
       .replace("%APP%", appHtml)
-      .replace("%LINKS%", seo);
+      .replace("%LINKS%", `${headTags}\n${seo}`);
 
     const filePath =
       route.path === "/" ? "index.html" : `${route.path}/index.html`;

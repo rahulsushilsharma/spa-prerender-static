@@ -21,4 +21,5 @@ export interface PrerenderOptions {
   template: string;
   dist: string;
   render: (route: RouteConfig) => string;
+  headTags: string;
 }

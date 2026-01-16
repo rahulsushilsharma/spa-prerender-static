@@ -1,7 +1,7 @@
 {
   "name": "spa-prerender-static",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A lightweight, framework-agnostic SPA prerendering library for generating SEO-friendly static HTML pages.",
   "author": "Rahul Sharma <rahu8299@gmail.com>",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build",
-    "publish": "pnpm run build && npm publish"
+    "build:publish": "pnpm run build && npm publish"
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
