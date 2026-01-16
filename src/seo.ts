@@ -46,7 +46,7 @@ ${image ? `<meta name="twitter:image" content="${escape(image)}">` : ""}
   if (schema) {
     tags += `
 <script type="application/ld+json">
-${JSON.stringify(schema, null, 2)}
+${JSON.stringify(schema, null, 2).replace(/</g, "\\u003c")}
 </script>`;
   }
 
